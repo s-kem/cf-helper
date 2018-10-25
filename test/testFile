@@ -1,0 +1,35 @@
+
+    "VCAP_SERVICES": {
+        "user-provided": [
+        {
+            "credentials": {
+             "alias": "firstAlias",
+             "url": "https://firstalias.url"
+        },
+            "label": "user-provided",
+            "name": "firstAlias",
+            "syslog_drain_url": "",
+            "tags": []
+        },
+        {
+            "credentials": {
+             "alias": "secondAlias",
+             "url": "https://secondalias.url"
+        },
+            "label": "user-provided",
+            "name": "secondAlias",
+            "syslog_drain_url": "",
+            "tags": []
+        },
+        {
+            "credentials": {
+             "alias": "thirdAlias",
+             "url": "https://firstalias.url"
+        },
+            "label": "user-provided",
+            "name": "thirdAlias",
+            "syslog_drain_url": "",
+            "tags": []
+        }
+        ]
+    }
