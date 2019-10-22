@@ -1,4 +1,6 @@
-    obj = {
+// TODO: This file was created by bulk-decaffeinate.
+// Sanity-check the conversion and remove this comment.
+    const obj = {
         "VCAP_SERVICES": {
             "user-provided": [
                 {
@@ -33,9 +35,9 @@
                 }
             ]
         }
-    }
+    };
 
-    obj2 = {
+    const obj2 = {
         "VCAP_SERVICES": {
             "user-provided": [
                 {
@@ -70,9 +72,9 @@
                 }
             ]
         }
-    }
+    };
 
-    obj3 = {
+    const obj3 = {
         "VCAP_SERVICES": {
             "user-provided": [
                 {
@@ -87,9 +89,9 @@
                 }
             ]
         }
-    }
+    };
 
-    mergedCredentialsObj = {
+    const mergedCredentialsObj = {
         "VCAP_SERVICES": {
             "user-provided": [
                 {
@@ -164,18 +166,19 @@
                 }
             ]
         }
-    }
+    };
 
-    quotes = "'"
-    expectedFileContents = 'export VCAP_SERVICES=' + quotes + JSON.stringify(obj.VCAP_SERVICES) + quotes
-    mergedFileContents = 'export VCAP_SERVICES=' + quotes + JSON.stringify(mergedCredentialsObj.VCAP_SERVICES) + quotes
-    testFilePath = 'test/testfile'
+    const quotes = "'";
+    const expectedFileContents = 'export VCAP_SERVICES=' + quotes + JSON.stringify(obj.VCAP_SERVICES) + quotes;
+    const mergedFileContents = 'export VCAP_SERVICES=' + quotes + JSON.stringify(mergedCredentialsObj.VCAP_SERVICES) + quotes;
+    const testFilePath = 'test/testfile';
 
-    module.exports =
-        expectedFileContents: expectedFileContents
-        obj: obj
-        obj2: obj2
-        obj3: obj3
-        testFilePath: testFilePath
-        mergedCredentialsObj: mergedCredentialsObj
-        mergedFileContents: mergedFileContents
+    module.exports = {
+        expectedFileContents,
+        obj,
+        obj2,
+        obj3,
+        testFilePath,
+        mergedCredentialsObj,
+        mergedFileContents
+    };
