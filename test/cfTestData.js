@@ -1,4 +1,4 @@
-vcap1 = {
+const vcap1 = {
     "VCAP_SERVICES": {
         "user-provided": [
             {
@@ -33,15 +33,15 @@ vcap1 = {
             }
         ]
     }
-}
+};
 
-cfenvOutput = """
+const cfenvOutput = `\
 Getting env variables for app app in some place as a person
 OK
 
 
 System-Provided:
-#{JSON.stringify vcap1}
+${JSON.stringify(vcap1)}
 {
  "VCAP_APPLICATION": {
   "thing": "stuff"
@@ -55,11 +55,11 @@ localDevelopment: false
 No running env variables have been set
 
 No staging env variables have been set
+\
+`;
 
-"""
 
-
-vcap2 =
+const vcap2 = {
     "VCAP_SERVICES": {
         "user-provided": [
             {
@@ -94,13 +94,14 @@ vcap2 =
             }
         ]
     }
-cfenvOutput2 = """
+};
+const cfenvOutput2 = `\
 Getting env variables for app app in some place as a person
 OK
 
 
 System-Provided:
-#{JSON.stringify vcap2}
+${JSON.stringify(vcap2)}
 {
  "VCAP_APPLICATION": {
   "thing": "stuff"
@@ -114,10 +115,10 @@ localDevelopment: false
 No running env variables have been set
 
 No staging env variables have been set
+\
+`;
 
-"""
-
-vcap3 =
+const vcap3 = {
     "VCAP_SERVICES": {
         "user-provided": [
             {
@@ -132,13 +133,14 @@ vcap3 =
             }
         ]
     }
-cfenvOutput3 = """
+};
+const cfenvOutput3 = `\
 Getting env variables for app app in some place as a person
 OK
 
 
 System-Provided:
-#{JSON.stringify vcap3}
+${JSON.stringify(vcap3)}
 {
  "VCAP_APPLICATION": {
   "thing": "stuff"
@@ -152,11 +154,11 @@ localDevelopment: false
 No running env variables have been set
 
 No staging env variables have been set
+\
+`;
 
-"""
 
-
-mergedContents =
+const mergedContents = {
     "VCAP_SERVICES": {
         "user-provided": [
             {
@@ -231,12 +233,14 @@ mergedContents =
             }
         ]
     }
+};
 
-module.exports =
-    vcap1: vcap1
-    vcap2: vcap2
-    vcap3: vcap3
-    cfenvOutput: cfenvOutput
-    cfenvOutput2: cfenvOutput2
-    cfenvOutput3: cfenvOutput3
-    mergedContents: mergedContents
+module.exports = {
+    vcap1,
+    vcap2,
+    vcap3,
+    cfenvOutput,
+    cfenvOutput2,
+    cfenvOutput3,
+    mergedContents
+};
