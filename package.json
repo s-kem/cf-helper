@@ -4,8 +4,8 @@
   "description": "Shell script with cf helper functions",
   "main": "./lib/main-module.js",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register --recursive --colors --reporter list test || true",
-    "test:dev": "mocha --compilers coffee:coffee-script/register --recursive --colors --watch --reporter nyan test",
+    "test": "mocha --recursive --colors --reporter list test || true",
+    "test:dev": "mocha --recursive --colors --watch --reporter nyan test",
     "compile": "coffee -c -o lib src",
     "build": "npm test && npm run compile",
     "preversion": "npm run build",
@@ -27,7 +27,7 @@
     "chai-as-promised": "^5.2.0",
     "coffee-script": "^1.9.2",
     "express": "^4.13.4",
-    "mocha": "^2.4.5",
+    "mocha": "^6.2.2",
     "sinon": "^1.15.4",
     "sinon-as-promised": "^4.0.0",
     "supervisor": "^0.9.1"
