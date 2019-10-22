@@ -1,7 +1,16 @@
 # cf-helper
-Helper functions for CF apps.
+Helper functions for CF apps. The main use cases I've had for this since I wrote it two years ago has been scraping my cloud foundry environment and creating a `VCAP_SERVICES="{}"` statement to drop into a `.env` file in my node applications in order to mimic my non-prod CF envioronments locally, and to generate `cups` and `uups` commands for my apps when I need to migrate them across cloud foundry spaces or update the bindings.
+
+This has not been released on public `npm`, so you'll have to install it from the source.
 
 See args for more details
+
+## Installation (Global)
+* Clone project, then from within project directory:
+
+    * run `npm install`
+    * run `npm run build`
+    * run `npm install -g .`
 
 ## Usage:
 cf-helper [OPTIONS]... [FILE]
@@ -44,8 +53,6 @@ For example:
 ```
 
 ## For Development:
-### Installation (Global)
-From project directory: npm install -g .
 
 ### Usage Without Installation
 node cf-helper/bin/main-module.js [OPTIONS]... [FILE]
