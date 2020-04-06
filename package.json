@@ -15,7 +15,7 @@
     "child-process-promise": "^2.0.1",
     "fs-readfile-promise": "^2.0.1",
     "fs-writefile-promise": "^1.0.3",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "mkdirp": "^0.5.1",
     "mkdirp-promise": "^2.0.0",
     "underscore": "^1.8.3",
